@@ -89,3 +89,10 @@ potentially malicious aspects of the Windows executable that the tool is examini
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220915224514/1.jpg"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
+
+#### peframe
+[Link](https://github.com/guelfoweb/peframe)
+- Open source tool to perform static analysis on Portable Executable malware and generic suspicious files - Detect packer, xor, digital signature, mutex, anti debug, anti virtual machine, suspicious sections and functions, macros
+
+#### Find Files in REMnux  
+```sudo find / -type f -name pescanner.py```
