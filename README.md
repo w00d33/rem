@@ -1,3 +1,21 @@
+# Table of Contents
+- [Find Files in REMnux](#find-files-in-remnux)
+- [OSINT and Sandboxes](#osint-and-sandboxes)
+- [Mutex](#mutex)
+- [Static Properties Analysis](#static-properties-analysis)
+  * [Execute With Full Privileges](#execute-with-full-privileges)
+  * [Static Properties](#static-properties)
+  * [Looking at Strings](#looking-at-strings)
+    + [pestr](#pestr)
+    + [BinText](#bintext)
+    + [strings2](#strings2)
+    + [Interesting Strings](#interesting-strings)
+  * [pestudio](#pestudio)
+  * [peframe](#peframe)
+  * [PE Header Details](#pe-header-details)
+    + [More Static Property Analysis Tools](#more-static-property-analysis-tools)
+
+
 ## Find Files in REMnux  
 ```sudo find / -type f -name pescanner.py```
 
@@ -9,7 +27,7 @@
 - [Website Investigation](https://zeltser.com/lookup-malicious-websites/)
 - [Other](https://github.com/hslatman/awesome-threat-intelligence)  
 
-### Mutex
+## Mutex
 - A flag that programs use to serialize access to a resource
 - Sometimes used by malware to avoid reinfecting the host (infection markers)
 - Sometimes embedded in a program as a string
