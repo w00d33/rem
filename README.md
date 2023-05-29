@@ -1,5 +1,7 @@
-# Malware Analysis Fundamentals
-## Introduction to Malware Analysis
+## Find Files in REMnux  
+```sudo find / -type f -name pescanner.py```
+
+## OSINT and Sandboxes
 - [Malware Report Template](https://zeltser.com/malware-analysis-report/)
 - [Malware Repositories](https://zeltser.com/malware-sample-sources/)
 - [Automated Sandboxes](https://zeltser.com/automated-malware-analysis/)
@@ -94,16 +96,24 @@ potentially malicious aspects of the Windows executable that the tool is examini
 [Link](https://github.com/guelfoweb/peframe)
 - Open source tool to perform static analysis on Portable Executable malware and generic suspicious files - Detect packer, xor, digital signature, mutex, anti debug, anti virtual machine, suspicious sections and functions, macros
 
-###  Find Files in REMnux  
-```sudo find / -type f -name pescanner.py```
-
 ### PE Header Details
-[Detect It Easy](https://github.com/horsicq/Detect-It-Easy)  
+- Programs have a specially formatted header that contains the details the operating system needs to
+load the file into memory and set up the runtime environment for the process so it can run properly
+ - Packing typically involves obfuscating, encrypting, or otherwise encoding the
+original executable to create a new file that embeds the original program as data
+- When the packed program runs, it unpacks itself into the memory of the infected host
 
-<img src="https://raw.githubusercontent.com/horsicq/Detect-It-Easy/master/docs/1.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />  
+    - [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)  
+    - [Exeinfo PE](https://github.com/ExeinfoASL/ASL)
 
-[Exeinfo PE](https://github.com/ExeinfoASL/ASL)
+#### More Static Property Analysis Tools
+- [signsrch](http://aluigi.altervista.org/mytoolz.htm) : Locates code used for crypto, compression, and more
+- [pescan](http://pev.sf.net) and [portex](https://katjahahn.github.io/PortEx) : Examine key aspects of Windows executable files and identify some anomalies
+- [MASTIFF](https://git.korelogic.com/mastiff.git) : Extracts many details from various types of malware;
+good for bulk review of many samples (launch using the mas.py command)
+- [exiftool](http://www.sno.phy.queensu.ca/~phil/exiftool) : Displays metadata embedded in files of various types
+- [trid](http://mark0.net/soft-trid-e.html) : Identifies the type of file you're starting to examine
+- [Viper](https://github.com/viper-framework/viper) : Manages the malware collection and extracts various
+static properties about the files
 
 
