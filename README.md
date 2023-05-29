@@ -69,3 +69,25 @@ Dump strings from a specific process id, including logging the module name and m
 
 Extract strings from `malware.exe` to a json file:
 * ```strings2 malware.exe -json > strings.json```
+
+#### Interesting Strings
+- IOCs for Detection:
+    - File system: malware.tmp
+    - Network: %s?i=%s&c=%s&p=%s
+- Persistence Mechanism:
+    - Registry: Software\Microsoft\Windows\CurrentVersion\Run
+- Communication Mechanism:
+    - Network: HTTP/1.1
+    - User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)
+
+#### pestudio
+[Link](https://www.winitor.com/download)
+- Automatically highlights
+potentially malicious aspects of the Windows executable that the tool is examining
+- Calculates various hash values
+
+<br>
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20220915224514/1.jpg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
