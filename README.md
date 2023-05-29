@@ -38,7 +38,7 @@
     - Registry Keys
     - URL Patterns
 
-### Other PEV Tools
+Other PEV Tools
 - pesec: check security features in PE files, extract certificates, and more
 - readpe: parse PE headers, sections, imports and exports
 - pescan: detect TLS callback functions, DOS stub modification, suspicious sections and more
@@ -85,8 +85,6 @@ Extract strings from `malware.exe` to a json file:
 - Automatically highlights
 potentially malicious aspects of the Windows executable that the tool is examining
 - Calculates various hash values
-
-<br>
 
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220915224514/1.jpg"
      alt="Markdown Monster icon"
