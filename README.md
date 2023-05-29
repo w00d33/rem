@@ -28,3 +28,8 @@
 - Crypto references
 - Digital certificates
 - "Interesting" strings
+
+### Looking at Strings
+```bash
+pestr malware.exe | more
+```
