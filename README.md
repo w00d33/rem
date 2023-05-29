@@ -10,3 +10,21 @@
 ### Mutex
 - A flag that programs use to serialize access to a resource
 - Sometimes used by malware to avoid reinfecting the host (infection markers)
+- Sometimes embedded in a program as a string
+- Usually requires behavioral or code analysis
+
+## Static Properties Analysis
+### Execute With Full Privileges
+- Right-click the shortcut.
+- Select Properties.
+- Click Advanced.
+- Enable Run as administrator.
+- Click OK
+### Static Properties
+- File and section hashes
+- Packer identification
+- Embedded resources
+- Imports and exports
+- Crypto references
+- Digital certificates
+- "Interesting" strings
