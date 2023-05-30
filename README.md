@@ -17,6 +17,7 @@
       - [More Static Property Analysis Tools](#more-static-property-analysis-tools)
   - [Behavioral Analysis](#behavioral-analysis)
     - [Essentials](#essentials)
+    - [Basic Process](#basic-process)
   - [Code Analysis Essentials](#code-analysis-essentials)
 
 
@@ -145,6 +146,28 @@ static properties about the files
 - Regshot: Highlights changes to the file system and the registry
 - ProcDOT: Visualizes Process Monitor logs for easier analysis
 - Wireshark: Sniffs the network and captures packets
+
+### Basic Process
+1. Launch Process Hacker
+2. Launch Process Monitor
+   1. Pause Capture
+   2. Clear Log
+3. Launch Regshot
+   1. Take 1st Shot
+4. Launch WireShark
+5. Activate Capture in Process Monitor
+6. Launch Malware
+7. Wait 30 Seconds
+8. Terminate Malware in Process Hacker
+9. Pause Capture in Process Monitor
+10. Pause Capture in WireShark
+11. Take 2nd Shot in Regshot
+12. Compare Registry Snapshots
+13. Filter Process Monitor by Malware Process Name
+14. Save All Events from Process Monitor as CSV
+15. Launch ProcDot
+16. Upload Process Monitor CSV to ProdDot
+17. Select Process and Click Refresh
 
 ## Code Analysis Essentials
 
