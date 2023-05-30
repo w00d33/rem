@@ -18,6 +18,9 @@
   - [Behavioral Analysis](#behavioral-analysis)
     - [Essentials](#essentials)
     - [Basic Process](#basic-process)
+    - [Network Emulation](#network-emulation)
+      - [DNS](#dns)
+      - [HTTP](#http)
   - [Code Analysis Essentials](#code-analysis-essentials)
 
 
@@ -168,6 +171,20 @@ static properties about the files
 12. Launch ProcDot
     1.  Upload Process Monitor CSV to ProdDot
     2.  Select Process and Click Refresh
+  
+### Network Emulation
+- A common practice when performing behavioral analysis is to give the specimen the network resources
+that it seeks
+
+#### DNS
+[fakedns](https://code.activestate.com/recipes/491264-mini-fake-dns-server/)  
+- On REMnux
+- Automatically responds to DNS queries with the IP address of the host on which it runs
+
+#### HTTP
+- On REMnux
+- ```httpd start```
+
 
 ## Code Analysis Essentials
 
