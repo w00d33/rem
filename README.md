@@ -1,6 +1,7 @@
 # Table of Contents
 - [Table of Contents](#table-of-contents)
   - [Find Files in REMnux](#find-files-in-remnux)
+  - [Decode HEX](#decode-hex)
   - [OSINT and Sandboxes](#osint-and-sandboxes)
   - [Mutex](#mutex)
   - [Static Properties Analysis](#static-properties-analysis)
@@ -26,6 +27,9 @@
 
 ## Find Files in REMnux  
 ```sudo find / -type f -name pescanner.py```
+
+## Decode HEX
+```xxd -r -p encoded.hex```
 
 ## OSINT and Sandboxes
 - [Malware Report Template](https://zeltser.com/malware-analysis-report/)
@@ -144,11 +148,11 @@ static properties about the files
 
 ## Behavioral Analysis
 ### Essentials
-- Process Hacker: Replaces built-in Task Manager, similar to Microsoft's Process Explorer tool
-- Process Monitor: Records interactions of processes with the registry, file system, network, and other processes
-- Regshot: Highlights changes to the file system and the registry
-- ProcDOT: Visualizes Process Monitor logs for easier analysis
-- Wireshark: Sniffs the network and captures packets
+- [Process Hacker](https://processhacker.sourceforge.io/): Replaces built-in Task Manager, similar to Microsoft's Process Explorer tool
+- [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon): Records interactions of processes with the registry, file system, network, and other processes
+- [Regshot](https://sourceforge.net/projects/regshot/): Highlights changes to the file system and the registry
+- [ProcDOT](https://www.procdot.com/): Visualizes Process Monitor logs for easier analysis
+- [Wireshark](https://www.wireshark.org/): Sniffs the network and captures packets
 
 ### Basic Process
 1. Launch Process Hacker
