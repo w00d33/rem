@@ -1,19 +1,23 @@
 # Table of Contents
-- [Find Files in REMnux](#find-files-in-remnux)
-- [OSINT and Sandboxes](#osint-and-sandboxes)
-- [Mutex](#mutex)
-- [Static Properties Analysis](#static-properties-analysis)
-  * [Execute With Full Privileges](#execute-with-full-privileges)
-  * [Static Properties](#static-properties)
-  * [Looking at Strings](#looking-at-strings)
-    + [pestr](#pestr)
-    + [BinText](#bintext)
-    + [strings2](#strings2)
-    + [Interesting Strings](#interesting-strings)
-  * [pestudio](#pestudio)
-  * [peframe](#peframe)
-  * [PE Header Details](#pe-header-details)
-    + [More Static Property Analysis Tools](#more-static-property-analysis-tools)
+- [Table of Contents](#table-of-contents)
+  - [Find Files in REMnux](#find-files-in-remnux)
+  - [OSINT and Sandboxes](#osint-and-sandboxes)
+  - [Mutex](#mutex)
+  - [Static Properties Analysis](#static-properties-analysis)
+    - [Execute With Full Privileges](#execute-with-full-privileges)
+    - [Static Properties](#static-properties)
+    - [Looking at Strings](#looking-at-strings)
+      - [pestr](#pestr)
+      - [BinText](#bintext)
+      - [strings2](#strings2)
+      - [Interesting Strings](#interesting-strings)
+    - [pestudio](#pestudio)
+    - [peframe](#peframe)
+    - [PE Header Details](#pe-header-details)
+      - [More Static Property Analysis Tools](#more-static-property-analysis-tools)
+  - [Behavioral Analysis](#behavioral-analysis)
+    - [Essentials](#essentials)
+  - [Code Analysis Essentials](#code-analysis-essentials)
 
 
 ## Find Files in REMnux  
@@ -134,4 +138,13 @@ good for bulk review of many samples (launch using the mas.py command)
 - [Viper](https://github.com/viper-framework/viper) : Manages the malware collection and extracts various
 static properties about the files
 
+## Behavioral Analysis
+### Essentials
+- Process Hacker: Replaces built-in Task Manager, similar to Microsoft's Process Explorer tool
+- Process Monitor: Records interactions of processes with the registry, file system, network, and other processes
+- Regshot: Highlights changes to the file system and the registry
+- ProcDOT: Visualizes Process Monitor logs for easier analysis
+- Wireshark: Sniffs the network and captures packets
+
+## Code Analysis Essentials
 
