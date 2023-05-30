@@ -157,17 +157,17 @@ static properties about the files
 4. Launch WireShark
 5. Activate Capture in Process Monitor
 6. Launch Malware
-7. Wait 30 Seconds
-8. Terminate Malware in Process Hacker
-9. Pause Capture in Process Monitor
-10. Pause Capture in WireShark
-11. Take 2nd Shot in Regshot
-12. Compare Registry Snapshots
-13. Filter Process Monitor by Malware Process Name
-14. Save All Events from Process Monitor as CSV
-15. Launch ProcDot
-16. Upload Process Monitor CSV to ProdDot
-17. Select Process and Click Refresh
+   1. Wait 30 Seconds
+7. Terminate Malware in Process Hacker
+8. Pause Capture in Process Monitor
+9. Pause Capture in WireShark
+10. Take 2nd Shot in Regshot
+    1.  Compare Registry Snapshots
+11. Filter Process Monitor by Malware Process Name
+    1.  Save All Events from Process Monitor as CSV
+12. Launch ProcDot
+    1.  Upload Process Monitor CSV to ProdDot
+    2.  Select Process and Click Refresh
 
 ## Code Analysis Essentials
 
