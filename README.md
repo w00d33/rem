@@ -23,6 +23,9 @@
       - [DNS](#dns)
       - [HTTP](#http)
   - [Code Analysis Essentials](#code-analysis-essentials)
+    - [x64dbg](#x64dbg)
+    - [x64dbg Example](#x64dbg-example)
+    - [API Monitor](#api-monitor)
 
 
 ## Find Files in REMnux  
@@ -192,3 +195,58 @@ that it seeks
 
 ## Code Analysis Essentials
 
+- Disassembling involves translating binary machine-level instructions to human-readable assembly language code.
+- Static code-level analysis involves using a disassembler to examine the program's code without actually executing it.
+- Dynamic code-level analysis involves examining the code at the assembly level while running the program.
+
+### x64dbg
+[Link](https://github.com/x64dbg/x64dbg)
+- Debugger or Windows Executables
+- Open Source
+- Handles 32 and 64-bit code
+- Supports plugins and scripts
+
+### x64dbg Example
+1. Load Malware in x64dbg
+   1. Disassembler is visible on the **CPU** tab
+      1. One instruction per line
+      2. 2nd column shows hex values that represent relative addresses (offsets) of instructions
+         1. ```00007FF713F53F07```
+      3. 3rd column shows groupings of instructions in hex
+         1. ```B9 09000000  ```
+      4. Next column version of those instructions in human-readable assembly
+         1. ```mov ecx,9 ```
+      5. Right most columns show comments
+         1. ```9:'\t'```
+2. Set Breakpoint
+   1. Direct the debugger to pause the executing of the debugged process by setting a breakpoint that defines the circumstances under which x64dbg will pause the specimen and give you control
+   2. Review executable's imports to spot API calls
+      1. Example ```ReadFile```
+      2. Set Breakpoint on the code that might read the file to find the general vicinity of code
+      3. SetBPX ReadFile
+3. Debug > Run
+   1. Pauses at ReadFile in kernel32.dll
+      1. Pauses AFTER code makes the ReadFile call
+   2. Title of x64dbg window shows current location
+   3. RIP designates the current instruction
+      1. current means the instruction will be executed next by the debugged program
+4. Examine Parameters pass to ReadFile
+   1. 64-bit code often uses the register ```rcx``` for supplying the first parameter to a function
+   2. Glance at the middle region of the right side of the **CPU** tab
+5. Determine where the handle is pointing
+   1. Go to handle tab
+   2. Right Click and Click Refresh
+   3. Look for the name of the desired handle
+6. Allow ReadFile to Finish Running
+   1. Examine the code implemented by the developer (user code) to see what the specimen does with the contents once they've been read
+   2. Debug > Run to User Code
+      1. Run until it reaches user code
+   3. Call Stack
+      1. Nested Functions in Reverse Chronological Order
+      2. After **From** the function will return to **To**
+      3. ```call``` operand is the typical way in which functions are invoked
+7. Run instructions until the instruction after CryptDecrypt call
+   1. Click on instruction
+   2. Debug > Run Until Selection
+
+### API Monitor
