@@ -26,6 +26,8 @@
     - [x64dbg](#x64dbg)
     - [x64dbg Example](#x64dbg-example)
     - [API Monitor](#api-monitor)
+    - [Decode Hex](#decode-hex-1)
+    - [Use XOR to Decode](#use-xor-to-decode)
 
 
 ## Find Files in REMnux  
@@ -250,3 +252,20 @@ that it seeks
    2. Debug > Run Until Selection
 
 ### API Monitor
+[Link](http://www.rohitab.com/apimonitor)
+- Quick way to spy on the parameters the program passes to external functions as well as to examine the return values of API calls
+
+### Decode Hex
+- Boolean XOR
+  - Method to obfuscate strings
+  - Change each character in the original string by XOR it with a 1-byte key value
+- ROR (Rotate Right) or ROL (Rotate Left)
+- ROT 
+  - Rotate Alphabet characters by a certain number of positions within the alphabet
+  
+### Use XOR to Decode
+- ```scite encoded.hex```
+- ```xxd -r -p encoded.hex > encoded.raw```
+- ```translate.py encoded.raw decoded.txt 'byte ^ 0x5b'```
+- ```cat decoded.txt```
+
